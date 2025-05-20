@@ -79,6 +79,35 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* 🔍 Media query para telas pequenas */
+@media (max-width: 600px) {
+    .conteudo {
+        padding: 10px;
+    }
+
+    .conteudo h1 {
+        font-size: 1.8rem;
+    }
+
+    .conteudo-texto {
+        font-size: 1.2rem;
+    }
+
+    input {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .input-small,
+    .input-medium {
+        width: 100%;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+    }
+}
 
 .negrito {
     font-weight: bold;
