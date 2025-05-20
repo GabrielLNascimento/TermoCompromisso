@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    margin: auto;
+}
+button:hover {
+    background: #218838;
+}
+
+#pdf-container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 150px;
+}
+
+h1 {
+    font-size: 2.8vw;
+    text-align: center;
+}
+
+p {
+    font-size: 1.8vw;
+    line-height: 1.8;
+}
+
+.conteudo-texto {
+    width: 80vw;
+    margin: auto;
+    text-align: justify;
+}
+
+.negrito {
+    font-weight: bolder;
+}
+
+input[type="text"] {
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input[type="text"].input-small {
+    width: 10%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+input[type="text"].input-medium {
+    width: 20%;
+    border: none;
+    border-bottom: 1px solid black;
+}
