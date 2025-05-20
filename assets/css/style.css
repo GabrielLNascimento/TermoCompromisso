@@ -7,7 +7,7 @@ input {
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    font-size: 30px;
+    font-size: 50px;
 }
 
 p {
@@ -26,7 +26,6 @@ body {
 }
 
 .conteudo h1 {
-    font-size: 1.5rem;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -42,7 +41,7 @@ body {
 /* Inputs */
 input {
     padding: 5px;
-    font-size: 1rem;
+    font-size: 2rem;
     width: auto;
     min-width: 500px;
     border: none;
