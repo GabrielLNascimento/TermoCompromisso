@@ -1,63 +1,108 @@
-body {
+/* Reset e base */
+body,
+h1,
+p,
+input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 25px;
-    margin: auto;
-}
-button:hover {
-    background: #218838;
-}
-
-#pdf-container {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    margin-bottom: 150px;
-}
-
-h1 {
-    font-size: 2.8vw;
-    text-align: center;
 }
 
 p {
-    font-size: 1.8vw;
-    line-height: 1.8;
-}
-
-.conteudo-texto {
-    width: 80vw;
-    margin: auto;
     text-align: justify;
 }
 
-.negrito {
-    font-weight: bolder;
+body {
+    background: #f5f5f5;
 }
 
-input[type="text"] {
-    width: 50%;
-    border: none;
-    border-bottom: 1px solid black;
+.conteudo {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text"].input-small {
-    width: 10%;
-    border: none;
-    border-bottom: 1px solid black;
+.conteudo h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
 }
-input[type="text"].input-medium {
-    width: 20%;
+
+.conteudo-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Inputs */
+input {
+    padding: 5px;
+    font-size: 1rem;
+    width: auto;
+    min-width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-small {
+    width: 50px;
+}
+
+.input-medium {
+    width: 150px;
+}
+
+/* Botão */
+#pdf-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
     border: none;
-    border-bottom: 1px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 🔍 Media query para telas pequenas */
+@media (max-width: 600px) {
+    .conteudo {
+        padding: 10px;
+    }
+
+    .conteudo h1 {
+        font-size: 1.8rem;
+    }
+
+    .conteudo-texto {
+        font-size: 1.2rem;
+    }
+
+    input {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .input-small,
+    .input-medium {
+        width: 100%;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+    }
 }
