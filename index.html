@@ -2,212 +2,249 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
-        <title>Termo de Compromisso</title>
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <!-- Bibliotecas -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Termo de Compromisso - PEPE</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                background-color: #f9f9f9;
+                line-height: 1.6;
+                color: #333;
+            }
+
+            .container {
+                background: white;
+                padding: 30px;
+                max-width: 800px;
+                margin: 0 auto;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+
+            h1,
+            h2 {
+                text-align: center;
+                margin-top: 0;
+            }
+
+            p {
+                margin-bottom: 12px;
+            }
+
+            .input-group {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 8px 0;
+            }
+
+            input[type='text'],
+            input[type='number'],
+            input[type='time'],
+            input[type='date'] {
+                padding: 5px 8px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 300px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .assinaturas {
+                margin-top: 30px;
+            }
+
+            .assinaturas .input-group {
+                flex-direction: column;
+            }
+
+            @media (min-width: 601px) {
+                .input-group input {
+                    width: auto;
+                    flex: 1;
+                }
+            }
+
+            #pdf-container {
+                text-align: center;
+                margin: 30px 0;
+                }
+
+                button {
+                background-color: #007BFF;
+                color: white;
+                padding: 10px 20px;
+                font-size: 1rem;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                }
+
+                button:hover {
+                background-color: #0056b3;
+                }
+        </style>
     </head>
     <body>
-        <div class="conteudo" id="areaParaExportar">
-            <h1>PROJETO PEPE - Programa Escolar dos Princípios do Evangelho</h1>
-            <h1>PROJETO ABA</h1>
-            <h1>TERMO DE COMPROMISSO</h1>
+        <div class="container">
+            <h1>Termo de Compromisso</h1>
+            <h2>
+                PROJETO PEPE – Programa Escolar dos Princípios do Evangelho<br />PROJETO
+                ABA
+            </h2>
 
-            <div class="conteudo-texto">
-                <p>
-                    Eu,
-                    <input type="text" />
-                    ,responsável pelo(a) aluno(a)
-                    <input type="text" />
-                    , declaro estar ciente e concordar com as condições
-                    descritas neste Termo de Compromisso para participação nos
-                    Projetos PEPE ABA, programa sócio educacional mantido pela
-                    Igreja Aba de Blumenau, pela contribuição espontânea dos
-                    pais dos alunos, e por voluntários
-                </p>
-                <p>
-                    <span class="negrito">1. Frequência e Comunicação:</span>
-                    <br />
-                    Comprometo-me a zelar pela frequência regular do(a) aluno(a)
-                    e comunicar qualquer ausência previamente. Estou ciente de
-                    que, caso o(a) aluno(a) acumule mais de
-                    <span class="negrito">
-                        quatro faltas sem justificativa dentro do mesmo mês </span
-                    >, poderá perder a vaga, que será cedida aos alunos da lista
-                    de espera.
-                </p>
-                <p>
-                    <span class="negrito"
-                        >2. Regularização e Desligamento:</span
-                    >
-                    <br />
-                    Declaro que o(a) aluno(a) está devidamente matriculado(a) em
-                    uma instituição de ensino regular, visto que o projeto não
-                    se caracteriza como creche ou escola. Em caso de desistência
-                    da participação do projeto, comprometo-me a assinar o
-                    <span class="negrito">Termo de Desligamento</span>,
-                    formalizando a saída do programa.
-                </p>
+            <p>
+                
+                <span class="input-group"
+                    >Eu, <input type="text" placeholder="Nome do responsável"
+                /> responsável pelo(a) aluno(a)</span>
+                , 
+                <span class="input-group"
+                    ><input type="text" placeholder="Nome do aluno(a)"
+                /></span>
+                , declaro estar ciente e concordar com as condições descritas
+                neste Termo de Compromisso para participação nos Projetos PEPE
+                ABA, programa sócio educacional mantido pela Igreja Aba de
+                Blumenau, pela contribuição espontânea dos pais dos alunos, e
+                por voluntários.
+            </p>
 
-                <p>
-                    <span class="negrito"
-                        >3. Contribuição Mensal e Horários:
-                    </span>
-                    <br />
-                    Estou ciente da sugestão de contribuição voluntária no valor
-                    de R$
-                    <input type="text" class="input-small" />
-                    para apoio às atividades
-                </p>
+            <p>
+                <strong>1. Frequência e Comunicação:</strong> Comprometo-me a
+                zelar pela frequência regular do(a) aluno(a) e comunicar
+                qualquer ausência previamente Estou ciente de que, caso o(a)
+                aluno(a) acumule mais de quatro faltas sem justificativa dentro
+                do mesmo mês, poderá perder a vaga, que será cedida aos alunos
+                da lista de espera.
+            </p>
 
-                <p>
-                    Os horários de funcionamento são das
-                    <input type="text" class="input-small" />
-                    às
-                    <input type="text" class="input-small" />
-                    horas, devendo o(a) responsável buscar o(a) aluno(a)
-                    pontualmente. Os portões da igreja serão abertos a partir
-                    das
-                    <input type="text" class="input-small" />
-                    horas e
-                    <input type="text" class="input-small" />
-                    horas, e até este horário meu filho(a) é de minha inteira
-                    responsabilidade. Atrasos superiores a 15 minutos poderão
-                    acarretar a suspensão da participação do(a) aluno(a), exceto
-                    quando previamente estabelecido com os missionários
-                    responsáveis.
-                </p>
+            <p>
+                <strong>2. Regularização e Desligamento:</strong> Declaro que
+                o(a) aluno(a) está devidamente matriculado(a) em uma instituição
+                de ensino regular, visto que o projeto não se caracteriza como
+                creche ou escola. Em caso de desistência da participação do
+                projeto, comprometo-me a assinar o Termo de Desligamento,
+                formalizando a saída do programa.
+            </p>
 
-                <p>
-                    <span class="negrito"
-                        >4. Uso de Imagem e Proteção de Dados (LGPD):</span
-                    >
-                    <br />
-                    Autorizo, nos termos da Lei Geral de Proteção de Dados
-                    Pessoais (Lei nº 13.709/2018), o uso de dados pessoais e
-                    imagens do(a) aluno(a) para fins de divulgação institucional
-                    e educativa, respeitando o caráter confessional do projeto e
-                    sua vinculação com a Igreja Aba Blumenau. Nenhuma imagem ou
-                    dado será utilizado para outros fins sem a devida
-                    autorização expressa.
-                </p>
+            <p>
+                <strong>3. Contribuição Mensal e Horários:</strong> Estou ciente
+                da sugestão de contribuição voluntária no valor de
+                <span class="input-group"
+                    ><input type="text" placeholder="R$ valor" /> para o apoio às atividades.</span
+                >  <br>
+                 
+                Os horários de funcionamento são das
+                <span class="input-group"
+                    ><input type="time" /> às <input type="time" /> </span
+                >, devendo o(a) responsável buscar o(a) aluno(a) pontualmente.
+                Os portões da igreja serão abertos a partir das
+                <span class="input-group"
+                    ><input type="time" />.
+            </p>
 
-                <p>
-                    <span class="negrito"
-                        >5. Ensino Confessional e Atividades:</span
-                    >
-                    <br />
-                    Compreendo que os Projetos PEPE ABA têm como base a Bíblia
-                    Sagrada como fundamento confessional, e que todas as
-                    atividades são desenvolvidas com base em seus ensinamentos.
-                    Autorizo a participação do(a) aluno(a) nas atividades
-                    pedagógicas, recreativas e espirituais promovidas pelo
-                    projeto, incluindo os cultos que acontecem mensalmente nas
-                    dependências do projeto.
-                </p>
-                <br>
-                <p>
-                    <span class="negrito">6. Calendário Escolar:</span> <br />
-                    Estou ciente de que o Projeto PEPE ABA segue o calendário
-                    escolar oficial do município de Blumenau para as escolas de
-                    ensino fundamental, com
-                    <span class="negrito">
-                        um período de 15 (quinze) dias corridos de férias no
-                        meio do ano, além da ausência de atividades durante
-                        feriados nacionais
-                    </span>
-                </p>
+            <p>
+                <strong>4. Uso de Imagem e Proteção de Dados (LGPD):</strong>
+                Autorizo, nos termos da Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018), o
+                uso de dados pessoais e imagens do(a) aluno(a) para fins de divulgação institucional e
+                educativa, respeitando o caráter confessional do projeto e sua vinculação com a Igreja Aba
+                Blumenau. Nenhuma imagem ou dado será utilizado para outros fins sem a devida
+                autorização expressa.
+            </p>
 
-                <p>
-                    <span class="negrito">7. Uso do Uniforme:</span> <br />
-                    Comprometo-me a providenciar o uniforme completo do(a)
-                    aluno(a), de uso <span class="negrito">obrigatório</span>, e
-                    zelar para que o mesmo seja utilizado adequadamente durante
-                    as atividades do projeto.
-                </p>
+            <p>
+                <strong>5. Ensino Confessional e Atividades:</strong> Compreendo
+                que os Projetos PEPE ABA têm como base a Bíblia Sagrada como
+                fundamento confessional, e que todas as atividades são desenvolvidas com base em seus
+                ensinamentos. Autorizo a participação do(a) aluno(a) nas atividades pedagógicas,
+                recreativas e espirituais promovidas pelo projeto, incluindo os cultos que acontecem
+                mensalmente nas dependências do projeto.
+            </p>
 
-                <p>
-                    <span class="negrito">8. Participação dos Pais:</span>
-                    <br />
-                    Concordo em participar de eventos comemorativos promovidos
-                    pelo projeto, como Dia das Mães, Dia dos Pais e outras datas
-                    especiais. Também manifesto minha disposição em receber
-                    visitas previamente agendadas de pastores ou missionários
-                    vinculados ao projeto, reconhecendo a importância dessas
-                    interações.
-                </p>
+            <p>
+                <strong>6. Calendário Escolar:</strong> Estou ciente de que o
+                Projeto PEPE ABA segue o calendário escolar oficial do município de
+                Blumenau para as escolas de ensino fundamental, com um período de 15 (quinze) dias
+                corridos de férias no meio do ano, além da ausência de atividades durante feriados
+                nacionais.
 
-                <p>
-                    <span class="negrito">9. Isenção de Responsabilidade:</span>
-                    <br />
-                    Reconheço que, embora todas as atividades sejam conduzidas
-                    sob supervisão, podem ocorrer incidentes fora do controle
-                    dos coordenadores. Autorizo que, em casos de emergência,
-                    o(a) aluno(a) seja levado para atendimento médico, e em
-                    casos urgentes, serei chamado para conduzir a criança até
-                    atendimento médico
-                </p>
+            </p>
 
-                <p>
-                    <span class="negrito"
-                        >10. Direitos Autorais e Restrições:</span
-                    >
-                    <br />
-                    Autorizo o uso de imagens e produções realizadas pelo(a)
-                    aluno(a) no âmbito dos Projetos PEPE ABA para fins de
-                    divulgação, gratuitamente e por tempo indeterminado, no
-                    território nacional e internacional. Não farei jus a
-                    qualquer pagamento pela cessão e transferência de todos os
-                    direitos autorais. Caso discorde deste item, comprometo-me a
-                    informar previamente por escrito.
-                </p>
+            <p>
+                <strong>7. Uso do Uniforme:</strong> Comprometo-me a
+                providenciar o uniforme completo do(a) aluno(a), de uso obrigatório, e
+                zelar para que o mesmo seja utilizado adequadamente durante as atividades do projeto.
+            </p>
 
-                <p>
-                    <span class="negrito"
-                        >11. Saúde e Informações Importantes:</span
-                    >
-                    <br />
-                    Comprometo-me a informar, por escrito, qualquer condição de
-                    saúde relevante do(a) aluno(a), incluindo
-                    <span class="negrito">
-                        doenças crônicas, alergias e restrições alimentares,
-                    </span>
-                    garantindo que as informações estejam sempre atualizadas.
-                    Estou ciente de que a omissão dessas informações pode
-                    comprometer o bem-estar do(a) aluno(a) durante as atividades
-                    e eximir a coordenação de responsabilidades decorrentes.
-                </p>
+            <p>
+                <strong>8. Participação dos Pais:</strong> Concordo em
+                participar de eventos comemorativos promovidos pelo projeto, como Dia das
+                Mães, Dia dos Pais e outras datas especiais. Também manifesto minha disposição em
+                receber visitas previamente agendadas de pastores ou missionários vinculados ao projeto,
+                reconhecendo a importância dessas interações.
 
-                <p>
-                    <span class="negrito">Declaração Final:</span> <br />
-                    Eu, <input type="text" />, declaro ter lido e compreendido
-                    os termos aqui descritos, estando ciente de que o
-                    descumprimento de qualquer cláusula poderá resultar no
-                    desligamento do(a) aluno(a). Para dúvidas, comprometo-me a
-                    contatar os coordenadores dos projetos.
-                </p>
+            </p>
 
-                <p>
-                    Local: <input type="text" class="input-medium" />,
-                    <input type="text" class="input-small" />
-                    de
-                    <input type="text" class="input-small" />
-                    de 2025.
-                </p>
-                <p>
-                    <span class="negrito">Assinaturas:</span> <br>
-                    Responsável pelo(a) aluno(a): <input type="text" /> <br>
-                    Nome legível: <input type="text" /> <br>
-                    Coordenador(a) do projeto: <input type="text" /> <br>
-                </p>
+            <p>
+                <strong>9. Isenção de Responsabilidade:</strong> Reconheço que,
+                embora todas as atividades sejam conduzidas sob supervisão, podem
+                ocorrer incidentes fora do controle dos coordenadores. Autorizo que, em casos de
+                emergência, o(a) aluno(a) seja levado para atendimento médico, e em casos urgentes, serei
+                chamado para conduzir a criança até atendimento médico.
+
+            </p>
+
+            <p>
+                <strong>10. Direitos Autorais e Restrições:</strong> Autorizo o
+                uso de imagens e produções realizadas pelo(a) aluno(a) no âmbito dos Projetos
+                PEPE ABA para fins de divulgação, gratuitamente e por tempo indeterminado, no território
+                nacional e internacional. Não farei jus a qualquer pagamento pela cessão e transferência de
+                todos os direitos autorais. Caso discorde deste item, comprometo-me a informar
+                previamente por escrito.
+            </p>
+
+            <p>
+                <strong>11. Saúde e Informações Importantes:</strong>
+                Comprometo-me a informar, por escrito, qualquer condição de
+                saúde relevante...
+            </p>
+
+            <p>
+                <strong>Declaração Final:</strong> 
+                <span class="input-group"
+                    >Eu, <input
+                        type="text"
+                        placeholder="Nome do responsável novamente"
+                />, declaro ter lido</span>
+                 e compreendido os termos aqui descritos...
+            </p>
+
+            <div class="assinaturas">
+                <div class="input-group">
+                    <label>Local:</label>
+                    <input type="text" placeholder="Cidade" />
+                    <label>Data:</label>
+                    <input type="date" />
+                </div>
+
+                <div class="input-group">
+                    Assinatura do responsável: _________________________________________ <br>
+                    Nome legível: _________________________________________ <br>
+                    Assinatura do coordenador: __________________________________________ <br>
+                    
+                </div>
             </div>
         </div>
+
         <div id="pdf-container">
             <button onclick="gerarPDF()">Exportar para PDF</button>
         </div>
-        
-
-        <script src="./assets/js/index.js"></script>
     </body>
+    <script src="assets/js/index.js"></script>
 </html>
